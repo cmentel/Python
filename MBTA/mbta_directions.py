@@ -1,31 +1,3 @@
-"""
-    CS5001
-    Fall 2019
-    HW 4 
-    Starter code -- This is a driver for getting
-    directions out of the mbta module.
-
-    This program makes several calls to functions you"ll define
-    in a module named mbta.py. Names, parameters, and return types
-    can be inferred from the code below and are also described
-    in the HW spec.
-
-    Simplifications compared to actual T directions:
-      * red line only, ashmont branch only
-      * unforgiving station-name matches (case must match,
-        and abbreviations too, as in Park St)
-      
-    Test cases for the whole program (you"ll still need to test your
-    individual functions as well):
-      * Input: Shawmut to Fields Corner. Output: 1 stop, towards Alewife
-      * Input: Kendall to Savin Hill. Output: 8 stops, towards Ashmont
-      * Input: Alewife to Davis. Output: 1 stop, towards Ashmont
-      * Input: Broadway to Charles/MGH. Output: 4 stops, towards Alewife
-      * Input: Ashmont to Alewife. Output: 16 stops, towards Alewife
-      * Input: Porter to Porter. Output: I can't help you
-
-"""
-
 import mbta
 
 def main():
