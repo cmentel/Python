@@ -1,18 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-'''
-    CS 5001 HW 2 part 1: Using Functions
-    Haversine function for "air miles" distance (nautical miles)
-    Calculates distance over large area when given a spherical element
-    (like the earth)
-    Python implementation obtained from:
-    https://stackoverflow.com/questions/
-             4913349/haversine-formula-in-python-bearing-and-distance-between-
-             two-gps-points/4913653#4913653
-    Note: this is open-source code. it does not conform to ALIGN style
-    but it's representative of some of the stuff you'll see in the "real world"
-'''
 
 from math import radians, cos, sin, asin, sqrt
 
