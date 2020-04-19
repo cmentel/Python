@@ -6,8 +6,8 @@ Due: Thursday October 31
 '''
 
 # imports
-from hanoi_viz import move_disk
-from hanoi_viz import initialize_towers
+HanoiViz = __import__("hanoi_viz")
+
 
 
 # list of acceptable inputs
@@ -24,7 +24,7 @@ middle = "B" #aux
 def move_tower(disks,source,target,middle,towers):
     if disks >=1:
         move_tower(disks-1, source, middle, target, towers)
-        move_disk (source,target,towers)
+        HanoiViz.move_disk (source, target, towers)
         move_tower(disks-1, middle, target, source, towers)
     else:
         return
@@ -45,7 +45,7 @@ def main():
     else:
         # converts input to integer
         num_disks = int(disks)
-        towers = initialize_towers(num_disks,source,middle,target)
+        towers = HanoiViz.initialize_towers(num_disks, source, middle, target)
         move_tower(disks,source,middle,target,towers)
 
 

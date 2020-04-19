@@ -8,7 +8,7 @@ Programming #1
 Using Functions
 """
 #Imports
-from haversine import haversine
+from Hurricane.haversine import haversine
 from datetime import date
 
 #Define Coordinates and Variables

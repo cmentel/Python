@@ -5,9 +5,7 @@ Programming #2
 mbta_test.py
 """
 
-from mbta import is_valid_station
-from mbta import get_direction
-from mbta import get_num_stops
+from MBTA.mbta import *
 
 def test_valid_mbta():
     ''' Function test_valid_mbta
@@ -163,7 +161,6 @@ def test_valid_mbta():
         num_failed += 1
 
     return num_failed
-    return num_tests
 
 
 def main():

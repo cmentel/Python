@@ -63,15 +63,15 @@ def print_towers(towers):
 
     # print first line with tower names formatted for disk size
     for tower in towers:
-        print("{:^{width}}".format(tower, width = num_disks * 2),
-              "\t", end = "")
+        print("{:^{width}}".format(tower, width=num_disks * 2),
+              "\t", end="")
     print("")
 
     # print towers line by line starting at the top, formatted for disk size
     for i in range(num_disks):
         for tower in towers:
-            print("{:^{width}}".format(towers[tower][i], width = num_disks * 2),
-                  "\t", end = "")
+            print("{:^{width}}".format(towers[tower][i], width=num_disks * 2),
+                  "\t", end="")
         print("")
     print("\n")
 

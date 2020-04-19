@@ -7,7 +7,7 @@ rxdrug_driver.py
 '''
 
 # imports
-from rxdrug import *
+from RX.rxdrug import *
 
 
 

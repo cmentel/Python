@@ -4,11 +4,7 @@ CS 5002 - Foundations
 Programming #3
 kmeans_driver.py
 """
-
-from kmeans_viz import draw_centroids
-from kmeans_viz import draw_assignment
-from kmeans_viz import draw_point
-from kmeans_viz import draw_centroid
+import kmeans_viz.py
 import random
 
 

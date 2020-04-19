@@ -7,12 +7,14 @@ wordgame.py
 '''
 
 # imports
-from scrabble_points import *
-from wordlist import *
+from Scrabble.scrabble_points import *
+from Scrabble.wordlist import *
 import random
 
 
 # assigns temporary variable to function call
+from Scrabble.wordlist import get_wordlist
+
 tmp = get_wordlist()
 
 
