@@ -8,30 +8,28 @@ scrabble_points.py
 
 
 def bag_of_letters(letter_frequency_dict):
+    letters = []
 
-	letters = []
+    for key in letter_frequency_dict:
+        tmp = key * letter_frequency_dict[key]
 
-	for key in letter_frequency_dict:
-		tmp = key*letter_frequency_dict[key]
+        if key != "blank":
+            tmp = list(tmp)
 
-		if key != "blank":
-			tmp = list(tmp)
+            for i in tmp:
+                letters.append(i)
 
-			for i in tmp:
-				letters.append(i)
+    return letters
 
-	return letters
 
-def get_word_value(word,letter_points_dict):
+def get_word_value(word, letter_points_dict):
+    word = word.upper()
+    word = list(word)
 
-	word = word.upper()
-	word = list(word)
+    total_points = 0
 
-	total_points = 0
+    for letter in word:
+        points = letter_points_dict[letter]
+        total_points = total_points + points
 
-	for letter in word:
-
-		points = letter_points_dict[letter]
-		total_points = total_points + points
-
-	return total_points
+    return total_points

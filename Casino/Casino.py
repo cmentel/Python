@@ -20,13 +20,16 @@ def poker():
     # Creates a dictioary from the keys of SUITS
     SUITS_KEYS = dict.fromkeys(SUITS)
 
-    SUITS_HAND = random.sample(list(SUITS_KEYS), 5)
-
     # Creates a dicionary from the keys of CARDS
     CARDS_KEYS = dict.fromkeys(CARDS)
 
+    # Hand of non suit specific
     CARD_KEYS_HAND = random.sample(list(CARDS_KEYS), 5)
-    print("\nHere is suits for hand:", SUITS_HAND, "\nHere is cards for hand:", CARD_KEYS_HAND)
+
+    SUITS_KEYS_HAND = random.choice(list(SUITS_KEYS))
+
+    print("Here is card key hands", CARD_KEYS_HAND)
+    print("Here is card key hands", SUITS_KEYS_HAND)
 
     # POKER_HAND = random.sample(POKER_CARD_DICT,5)
     # print(POKER_HAND)
