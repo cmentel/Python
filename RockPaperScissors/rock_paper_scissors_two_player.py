@@ -117,7 +117,7 @@ def play_again(games):
     if games == 1:
         print("That's", games, "game!")
     else:
-        print("That's",games,"games!")
+        print("That's", games, "games!")
     option = input("Would you want to play again? ('YES' or 'NO')\n")
     if option.upper() == "YES":
         return True
