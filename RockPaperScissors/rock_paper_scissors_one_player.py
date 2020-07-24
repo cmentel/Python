@@ -16,6 +16,9 @@ def initialize():
     computer_wins = 0
     computer = "Computer"
     games_to_play = int(input("How many games would you like to play?\n"))
+    if games_to_play < 1:
+        print("Please enter a valid number from 1 to ∞")
+        initialize()
     play_game(games, player_one, computer, player_one_wins, computer_wins, games_to_play)
 
 
