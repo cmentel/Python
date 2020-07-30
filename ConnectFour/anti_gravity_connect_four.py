@@ -46,6 +46,10 @@ def for_spot_in_row(row, column):
 
 # function to get the winner of the game
 def get_winner(player, board):
+    if is_game_over_full_board(board):
+        print("------------ GAME OVER!! BOARD IS FULL!! ------------\n")
+        board_print(board)
+        return
     print("------------ GAME OVER!!", player.upper(), "WINS!! ------------\n")
     if is_game_over_diagonal(board):
         print(player, "got connect four in a diagonal!\n")
