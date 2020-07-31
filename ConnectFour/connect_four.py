@@ -9,6 +9,7 @@ EMPTY = "|_|"
 PLAYER_ONE = " X "
 PLAYER_TWO = " O "
 
+
 # getting player names
 player_one_name = input("Hello! What is player one's name?\n")
 player_two_name = input("Hello! What is player two's name?\n")
@@ -16,7 +17,7 @@ player_two_name = input("Hello! What is player two's name?\n")
 
 # function to print the board
 def board_print(board):
-    print("            GAME BOARD:    ")
+    print("         GAME BOARD:    ")
     holder = 1
     counter = 1
     top_numbers = []
@@ -25,10 +26,10 @@ def board_print(board):
             for spot in row:
                 top_numbers.append(counter)
                 counter += 1
-            print("    ",
+            print("  ",
                   str(top_numbers).replace("[", "").replace("]", "").replace(",", "|").replace("'", "").replace("|",
                                                                                                                 "  "))
-        print(holder, " ",
+        print(" ",
               str(row).replace("[", "").replace("]", "").replace("'", "").replace("||", "|").replace(",", ""))
 
         holder += 1
@@ -277,42 +278,49 @@ def move(board, player_turn):
     turn = True
     while turn:
         try:
-            print(player_turn, "please input your move by entering: Row, Column\n")
+            print(player_turn, "please input your move by entering the column\n")
             player_move = input()
-            move_split = []
-            for i in player_move:
-                try:
-                    move_split.append(int(i))
-                except:
-                    pass
-
-            row_value = int(move_split[0] - 1)
-            column_value = int(move_split[1] - 1)
+            try:
+                player_move = (int(player_move))
+            except:
+                pass
 
             # if value is off the board
-            if row_value > 5 or row_value < 0 or column_value > 6 or column_value < 0:
+            if player_move > 7 or player_move < 1:
                 print("Invalid move, please try again!\n")
 
-            # player one moves to empty spot
-            elif board[row_value][column_value] == EMPTY and player_turn == player_one_name:
-                board[row_value][column_value] = PLAYER_ONE
-                turn = False
 
-            # player two moves to empty spot
-            elif board[row_value][column_value] == EMPTY and player_turn == player_two_name:
-                board[row_value][column_value] = PLAYER_TWO
-                turn = False
 
-            # if spot is taken
-            else:
-                spot = board[row_value][column_value]
-                if spot == PLAYER_ONE:
-                    print("Spot is taken by", player_one_name, "\nTry again!\n\n")
-                else:
-                    print("Spot is taken by", player_two_name, "\nTry again!\n\n")
+            player_move = player_move - 1
+
+            # if column is filled
+            if board[0][player_move] != EMPTY:
+                print("Invalid move, please try again!\n")
+
+            # moves to empty spot
+            try:
+                row_count = 5
+                for row in board:
+
+                    if board[row_count][player_move] == EMPTY and player_turn == player_one_name:
+                        board[row_count][player_move] = PLAYER_ONE
+                        turn = False
+                        break
+
+                    elif board[row_count][player_move] == EMPTY and player_turn == player_two_name:
+                        board[row_count][player_move] = PLAYER_TWO
+                        turn = False
+                        break
+
+                    else:
+                        row_count -= 1
+                        continue
+
+            except:
+                pass
 
         except:
-            continue
+            pass
 
 
 # function to play the game
@@ -338,6 +346,7 @@ def initialize():
     height = 6
     width = 7
     board = [[EMPTY] * 7 for i in range(6)]
+
     print("Welcome,", player_one_name, "&", player_two_name, "!\n")
     play(board, player_one_name, player_two_name)
 
