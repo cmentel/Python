@@ -59,7 +59,7 @@ def print_towers(towers):
               correct overall height.
     '''
     # get length of towers
-    num_disks = len(next(iter(towers.values())))
+    num_disks = len(next(iter(towers.VALUES())))
 
     # print first line with tower names formatted for disk size
     for tower in towers:
