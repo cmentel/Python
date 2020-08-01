@@ -1,7 +1,7 @@
 '''
 Connor Mentel
 Roulette
-Last mod: 7/31/20
+Last mod: 8/1/20
 '''
 import random
 
@@ -13,8 +13,10 @@ ROULETTE_VALUES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,
 ROULETTE_RED_NUMS = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]
 ROULETTE_BLACK_NUMS = [2, 4, 6, 8, 10, 11, 13, 15, 17, 20, 22, 24, 26, 28, 29, 31, 33, 35]
 
+
 def initialize(bank):
     roulette(bank)
+
 
 def roulette(bank):
     playing = True

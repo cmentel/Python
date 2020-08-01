@@ -1,8 +1,7 @@
 '''
 Connor Mentel
-Scratch File_6
-Last Mod: 1/2/20
-Jan 2 2020
+casino
+Last Mod: 8/1/20
 '''
 
 from Casino import poker

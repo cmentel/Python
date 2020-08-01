@@ -1,7 +1,7 @@
 '''
 Connor Mentel
 Poker
-Last Mod: 7/31/20
+Last Mod: 8/1/20
 '''
 import random
 from collections import defaultdict
@@ -111,7 +111,7 @@ def swap(player_hand):
 def bet(bank):
     try:
         bet_number = int(input("How much would you like to bet?\n"))
-        print("bet number",bet_number)
+        print("bet number", bet_number)
         print("bank", bank)
         if bet_number > bank:
             print("Your bet cannot be greater than your bank\n")
@@ -167,12 +167,12 @@ def sub_options(bank, player_hand, dealer_hand, table_hand, bet_holder, swap_alr
             bank = bank + (bet_holder * 2)
             print("Congrats!! You won!\n")
             print_hands(player_hand, dealer_hand, table_hand)
-            print("player bank",bank)
+            print("player bank", bank)
         elif winner == "Dealer":
             bank = bank - bet_holder
             print("Sorry you didn't win this time!\n")
             print_hands(player_hand, dealer_hand, table_hand)
-            print("dealer bank",bank)
+            print("dealer bank", bank)
         else:
             print("It's a tie! Nothing changes!\n")
             print_hands(player_hand, dealer_hand, table_hand)
@@ -216,9 +216,9 @@ def options(bank, cards):
 
     playing = True
     while playing:
-        #TODO always returns "None"
+        # TODO 'result' always returns "None"
         result = str(sub_options(bank, player_hand, dealer_hand, table_hand, bet_holder, swap_already, bet_already))
-        print("result",result)
+        print("result", result)
 
         # if we exited out of poker
         if "Exit" in result:
