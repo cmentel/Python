@@ -3,6 +3,7 @@ Connor Mentel
 Poker
 Last Mod: 8/2/20
 '''
+
 import random
 from collections import defaultdict
 from itertools import combinations
@@ -157,7 +158,6 @@ class Poker:
 
         playing = True
         while playing:
-            # TODO have to exit 4 times
             if self.bank <= 0:
                 print("Sorry you're broke!\n")
                 return self.bank
