@@ -1,7 +1,7 @@
 '''
 Connor Mentel
 Poker
-Last Mod: 8/2/20
+Last Mod: 8/4/20
 '''
 
 import random
@@ -12,16 +12,14 @@ VALUES = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "10": 
           "A": 14}
 
 CARD_ORDER_DICT = {"2": 2, "3": 3, "4": 4, "5": 5, "6": 6, "7": 7, "8": 8, "9": 9, "T": 10, "J": 11, "Q": 12,
-                   "K": 13,
-                   "A": 14}
+                   "K": 13, "A": 14}
 
 DECK = ["AH", "AS", "AC", "AD", "KH", "KS", "KC", "KD", "QH", "QS", "QC", "QD", "JH", "JS", "JC", "JD", "TH", "TS",
         "TC", "TD", "9H", "9S", "9C", "9D", "8H", "8S", "8C", "8D", "7H", "7S", "7C", "7D", "6H", "6S", "6C", "6D",
         "5H", "5S", "5C", "5D", "4H", "4S", "4C", "4D", "3H", "3S", "3C", "3D", "2H", "2S", "2C", "2D"]
 
 HAND_DICT = {9: "straight-flush", 8: "four-of-a-kind", 7: "full-house", 6: "flush", 5: "straight",
-             4: "three-of-a-kind",
-             3: "two-pairs", 2: "one-pair", 1: "highest-card"}
+             4: "three-of-a-kind", 3: "two-pairs", 2: "one-pair", 1: "highest-card"}
 
 
 class Poker:
@@ -58,7 +56,7 @@ class Poker:
             if outcome == value:
                 return key
 
-    # function to swap out cards
+    # method to swap out cards
     def swap(self):
         swapping = True
         while swapping:
@@ -115,7 +113,7 @@ class Poker:
             swapping = False
             break
 
-    # function to place bet
+    # method to place bet
     def bet(self):
         betting = True
         while betting:
@@ -136,7 +134,7 @@ class Poker:
                 print("Please enter a number.\n")
                 continue
 
-    # function to wager and play outcome
+    # method to wager and play outcome
     def gamble(self):
         player_outcome = self.play(self.player_hand)
         dealer_outcome = self.play(self.dealer_hand)
@@ -233,7 +231,7 @@ class Poker:
 
         return self.bank
 
-    # function to check the value of the hand
+    # method to check the value of the hand
     def check_hand(self, hand):
         if self.check_straight_flush(hand):
             return 9
