@@ -100,7 +100,6 @@ class Casino:
             elif game_choice == "b":
                 self.play_blackjack()
 
-            # TODO Fix Roulette Logic
             # Playing Roulette
             elif game_choice == "c":
                 self.play_roulette()
