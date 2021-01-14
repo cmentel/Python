@@ -77,7 +77,7 @@ def begin():
     people = get_number_of_people()
     if people == 0:
         return False
-    print("There are", people, "in the circle")
+    print("There are", people, "people in the circle")
     best_spot = get_position_to_stand(people)
     print("You should stand in position", best_spot, "\n")
     return True
