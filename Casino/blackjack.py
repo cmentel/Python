@@ -124,7 +124,7 @@ class Blackjack:
                     print("Congratulations! You got a Blackjack!\n")
                     self.bank = self.bank + int(self.bet * 2.5)
                 elif self.dealer_total == 21:
-                    print("Sorry, you lose. The dealer got a blackjack.\n")
+                    print("Sorry, you lose. The dealer got 21.\n")
                 elif self.player_total > 21:
                     print("Sorry. You busted. You lose.\n")
                 elif self.dealer_total > 21:
